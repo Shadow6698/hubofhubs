@@ -1,0 +1,76 @@
+-- Load OrionLib
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/Snxdfer/back-ups-for-libs/main/Orion.lua'))()
+
+-- Create main window
+local Window = OrionLib:MakeWindow({
+    Name = "Hub games",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "Config"
+})
+
+-- Aba 1 "Roube um Brainrot"
+local Aba1 = Window:MakeTab({
+    Name = "Roube um Brainrot",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Mensagem no topo da Aba1
+Aba1:AddLabel("; n tive tempo pra pensar nos nomes")
+
+-- Lista de hubs Aba1
+local hubs = {
+    {Name = "Hub1", URL = "https://pastebin.com/raw/mrTj0hFf"},
+    {Name = "Chili Hub", URL = "https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"},
+    {Name = "Hub 3", URL = "https://api.luarmor.net/files/v3/loaders/53325754de16c11fbf8bf78101c1c881.lua"},
+    {Name = "Hub 4", URL = "https://raw.githubusercontent.com/Ayvathion/AV-On-Top/refs/heads/main/Loader.lua"},
+    {Name = "Steals", URL = "https://raw.githubusercontent.com/Jrizz817/steala/refs/heads/main/file.luau"},
+    {Name = "Hub 6", URL = "https://oreofdev.github.io/Sw1ftSync/Raw/SSXBr/"},
+    {Name = "Hub 7", URL = "https://raw.githubusercontent.com/Akbar123s/Script-Roblox-/main/Script%20Brainrot"}
+}
+
+for _, hub in ipairs(hubs) do
+    Aba1:AddButton({
+        Name = hub.Name,
+        Callback = function()
+            loadstring(game:HttpGet(hub.URL))()
+        end
+    })
+end
+
+-- Aba 2 "Grow a Garden"
+local Aba2 = Window:MakeTab({
+    Name = "Grow a Garden",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Mensagem no topo da Aba2
+Aba2:AddLabel("; n tive tempo pra pensar nos nomes")
+
+-- Lista de hubs Aba2
+local hubsGrowGarden = {
+    {Name = "Hub1", URL = "https://raw.githubusercontent.com/agreed69-scripts/open-src-scripts/refs/heads/main/Container%20RNG.lua"},
+    {Name = "Hub 2", URL = "https://raw.githubusercontent.com/greywaterstill/GAG/refs/heads/main/nathub.lua"},
+    {Name = "Hub 3", URL = "https://raw.githubusercontent.com/depthso/Grow-a-Garden/refs/heads/main/autofarm.lua"},
+    {Name = "Hub 4", URL = "https://raw.githubusercontent.com/forkT3/Grow-a-Forest-Script/main/Grow_A_Forest_Op_script.lua"},
+    {Name = "Hub 5", URL = "https://raw.githubusercontent.com/nootmaus/GrowAAGarden/refs/heads/main/mauscripts"},
+    {Name = "Hub 6", URL = "https://raw.githubusercontent.com/TreeNiv/TreeNivScriptGAG/refs/heads/main/TreeNivKeySystemGAG.lua"},
+    {Name = "Hub 7", URL = "https://raw.githubusercontent.com/kosowa/asd/refs/heads/main/GaG.lua"},
+    {Name = "Hub 8", URL = "https://raw.githubusercontent.com/fatigue-a/skeleton-hub/refs/heads/main/loader.lua"},
+    {Name = "Hub 9", URL = "https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Loader/LoaderV1.lua"},
+    {Name = "Hub 10", URL = "https://github.com/Scripts777/MateoDev2025/blob/main/Grow%20a%20Garden%20Auto%20Farm"}
+}
+
+for _, hub in ipairs(hubsGrowGarden) do
+    Aba2:AddButton({
+        Name = hub.Name,
+        Callback = function()
+            loadstring(game:HttpGet(hub.URL,true))()
+        end
+    })
+end
+
+-- Inicialização
+OrionLib:Init()
