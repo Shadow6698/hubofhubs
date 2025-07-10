@@ -1,25 +1,24 @@
 -- Load OrionLib
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/Snxdfer/back-ups-for-libs/main/Orion.lua'))()
 
--- Create main window
+-- Criação da Janela Principal
 local Window = OrionLib:MakeWindow({
-    Name = "Hub games",
+    Name = "hub games",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "Config"
 })
 
--- Aba 1 "Roube um Brainrot"
+-------------------------------
+-- Aba 1: Roube um Brainrot --
+-------------------------------
+
 local Aba1 = Window:MakeTab({
     Name = "Roube um Brainrot",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
--- Mensagem no topo da Aba1
-Aba1:AddLabel("; n tive tempo pra pensar nos nomes")
-
--- Lista de hubs Aba1
 local hubs = {
     {Name = "Hub1", URL = "https://pastebin.com/raw/mrTj0hFf"},
     {Name = "Chili Hub", URL = "https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"},
@@ -39,17 +38,16 @@ for _, hub in ipairs(hubs) do
     })
 end
 
--- Aba 2 "Grow a Garden"
+-----------------------------
+-- Aba 2: Grow a Garden   --
+-----------------------------
+
 local Aba2 = Window:MakeTab({
     Name = "Grow a Garden",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
--- Mensagem no topo da Aba2
-Aba2:AddLabel("; n tive tempo pra pensar nos nomes")
-
--- Lista de hubs Aba2
 local hubsGrowGarden = {
     {Name = "Hub1", URL = "https://raw.githubusercontent.com/agreed69-scripts/open-src-scripts/refs/heads/main/Container%20RNG.lua"},
     {Name = "Hub 2", URL = "https://raw.githubusercontent.com/greywaterstill/GAG/refs/heads/main/nathub.lua"},
@@ -67,10 +65,36 @@ for _, hub in ipairs(hubsGrowGarden) do
     Aba2:AddButton({
         Name = hub.Name,
         Callback = function()
-            loadstring(game:HttpGet(hub.URL,true))()
+            loadstring(game:HttpGet(hub.URL, true))()
         end
     })
 end
 
--- Inicialização
+---------------------------------------
+-- Aba 3: 99 Dias na Floresta       --
+---------------------------------------
+
+local Aba3 = Window:MakeTab({
+    Name = "99 Dias na Floresta",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local hubsFloresta = {
+    {Name = "Ringta Scripts", URL = "https://raw.githubusercontent.com/fjruie/testuis/refs/heads/main/ern.lua"},
+    {Name = "Mutao Hub", URL = "https://raw.githubusercontent.com/SLK-gaming/Hutao-Hub/refs/heads/main/99-Nights-In-The-Forest.txt"},
+    {Name = "OVERFLOW", URL = "https://raw.githubusercontent.com/OverflowBGSI/Overflow/refs/heads/main/loader.txt"},
+    {Name = "Panda Hub", URL = "https://pandadevelopment.net/virtual/file/2ed004f44a63f42d"}
+}
+
+for _, hub in ipairs(hubsFloresta) do
+    Aba3:AddButton({
+        Name = hub.Name,
+        Callback = function()
+            loadstring(game:HttpGet(hub.URL))()
+        end
+    })
+end
+
+-- Inicializar a interface
 OrionLib:Init()
