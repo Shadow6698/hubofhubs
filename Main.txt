@@ -3,7 +3,7 @@ local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/Snxd
 
 -- Criação da Janela Principal
 local Window = OrionLib:MakeWindow({
-    Name = "hub games",
+    Name = "Hub Games",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "Config"
@@ -19,7 +19,7 @@ local Aba1 = Window:MakeTab({
     PremiumOnly = false
 })
 
-local hubs = {
+local hubsBrainrot = {
     {Name = "Hub1", URL = "https://pastebin.com/raw/mrTj0hFf"},
     {Name = "Chili Hub", URL = "https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"},
     {Name = "Hub 3", URL = "https://api.luarmor.net/files/v3/loaders/53325754de16c11fbf8bf78101c1c881.lua"},
@@ -29,7 +29,7 @@ local hubs = {
     {Name = "Hub 7", URL = "https://raw.githubusercontent.com/Akbar123s/Script-Roblox-/main/Script%20Brainrot"}
 }
 
-for _, hub in ipairs(hubs) do
+for _, hub in ipairs(hubsBrainrot) do
     Aba1:AddButton({
         Name = hub.Name,
         Callback = function()
@@ -58,7 +58,13 @@ local hubsGrowGarden = {
     {Name = "Hub 7", URL = "https://raw.githubusercontent.com/kosowa/asd/refs/heads/main/GaG.lua"},
     {Name = "Hub 8", URL = "https://raw.githubusercontent.com/fatigue-a/skeleton-hub/refs/heads/main/loader.lua"},
     {Name = "Hub 9", URL = "https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Loader/LoaderV1.lua"},
-    {Name = "Hub 10", URL = "https://github.com/Scripts777/MateoDev2025/blob/main/Grow%20a%20Garden%20Auto%20Farm"}
+    {Name = "Hub 10", URL = "https://github.com/Scripts777/MateoDev2025/blob/main/Grow%20a%20Garden%20Auto%20Farm"},
+    {Name = "Dark Spawner", URL = "https://paste.ee/r/9gyIwi7K"},
+    {Name = "Dark Spawner v2", URL = "https://raw.githubusercontent.com/ameicaa1/Grow-a-Garden/main/Grow_A_Garden.lua"},
+    {Name = "Photon", URL = "https://raw.githubusercontent.com/NittarPP/PhotonScript/refs/heads/main/Loading/Loading.lua"},
+    {Name = "Speed Hub X", URL = "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"},
+    {Name = "Night Hub", URL = "https://raw.githubusercontent.com/checkurasshole/Script/refs/heads/main/IQ"},
+    {Name = "Tora Hub", URL = "https://raw.githubusercontent.com/gumanba/Scripts/main/GrowaGarden"}
 }
 
 for _, hub in ipairs(hubsGrowGarden) do
